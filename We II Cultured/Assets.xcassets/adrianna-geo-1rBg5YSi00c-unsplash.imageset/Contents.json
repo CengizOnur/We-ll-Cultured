@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "adrianna-geo-1rBg5YSi00c-unsplash.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "adrianna-geo-1rBg5YSi00c-unsplash@2x.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "adrianna-geo-1rBg5YSi00c-unsplash@3x.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
