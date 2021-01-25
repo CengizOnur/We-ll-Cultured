@@ -1,6 +1,6 @@
 # We-ll-Cultured
 
-It is app(basic example app) that connect people and people can see exhibits, share them, also can make organizations to visit museum etc. to be well cultured.
+It is app(basic example app) that connect people each other, so people can share exhibits, display them, also can make organizations to visit museum etc. to be well cultured.
 
 <img width="1191" alt="1" src="https://user-images.githubusercontent.com/44976948/105694446-07cf2c80-5f12-11eb-90d5-7fca922962ef.png">
 <img width="1204" alt="2" src="https://user-images.githubusercontent.com/44976948/105694501-19183900-5f12-11eb-9bc5-60eb610ebd60.png">
