@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         field.placeholder = "Enter your email address"
         field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
         field.leftViewMode = .always
-        field.backgroundColor = .white
+        field.backgroundColor = .systemBackground
         return field
     }()
     
@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
         field.placeholder = "Enter your password"
         field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
         field.leftViewMode = .always
-        field.backgroundColor = .white
+        field.backgroundColor = .systemBackground
         field.isSecureTextEntry = true
         return field
     }()

@@ -39,7 +39,7 @@ class DiscoverViewController: UIViewController {
         field.placeholder = "Discover ..."
         field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
         field.leftViewMode = .always
-        field.backgroundColor = .white
+        field.backgroundColor = .systemBackground
         return field
     }()
     
@@ -136,8 +136,6 @@ class DiscoverViewController: UIViewController {
                                     width: (view.width - searchField.right) - (K.setUI.spaceBetweenFields * 2),
                                     height: K.setUI.fieldHeight)
         
-//        let image = UIImage(systemName: "magnifyingglass")
-//        searchButton.setImage(image, for: .normal)
         
         imageAreaView.frame = CGRect(x: K.setUI.spaceBetweenFields,
                                      y: searchField.bottom + K.setUI.spaceBetweenFields,

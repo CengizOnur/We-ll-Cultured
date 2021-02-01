@@ -31,14 +31,6 @@ class SavedViewController: UIViewController {
         return table
     }()
     
-    private let searchView: UIView = {
-        let view = UIView()
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.lightGray.cgColor
-        
-//        view.clipsToBounds = true
-        return view
-    }()
     
     private let searchBar: UISearchBar = {
         let bar = UISearchBar()
@@ -46,8 +38,7 @@ class SavedViewController: UIViewController {
         bar.autocorrectionType = .no
         bar.returnKeyType = .search
         bar.layer.cornerRadius = 12
-        bar.layer.borderWidth = 1
-        bar.layer.borderColor = UIColor.lightGray.cgColor
+        bar.layer.borderWidth = 0
         bar.placeholder = "Find..."
         return bar
     }()
@@ -56,22 +47,15 @@ class SavedViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         
-        
-        searchView.frame = CGRect(x: view.left,
-                                  y: K.setUI.heightFromTop,
-                                 width: view.width,
-                                 height: 60)
-        
-        
-        searchBar.frame = CGRect(x: K.setUI.spaceForBar * 4,
-                                 y: view.top + K.setUI.spaceForBar,
-                                   width: view.width - 80,
-                                   height: K.setUI.fieldHeight)
+        searchBar.frame = CGRect(x: view.left,
+                                 y: (navigationController?.navigationBar.frame.height)! + (view.window?.windowScene?.statusBarManager?.statusBarFrame.height)!,
+                                   width: view.width,
+                                   height: 60)
         
         tableView.frame = CGRect(x: view.left,
-                                 y: searchView.bottom,
+                                 y: searchBar.bottom,
                                  width: view.width,
-                                 height: view.bottom - searchView.bottom)
+                                 height: view.bottom - searchBar.bottom)
         
     }
     
@@ -92,8 +76,7 @@ class SavedViewController: UIViewController {
         setupTableView()
         
         view.addSubview(tableView)
-        view.addSubview(searchView)
-        searchView.addSubview(searchBar)
+        view.addSubview(searchBar)
         
         self.tableView.register(SwipeTableViewCell.self, forCellReuseIdentifier: K.cellIdentifier)
         
@@ -189,6 +172,7 @@ extension SavedViewController: UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.text = "No exhibit added"
         }
         
+        cell.textLabel?.textColor = .link
         cell.backgroundColor = UIColor(displayP3Red: 255, green: 255, blue: 255, alpha: 0.8)
         
         return cell

@@ -36,6 +36,10 @@ class ChatRoomViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
+        let tabBarControllerHeight = (tabBarController?.tabBar.frame.size.height ?? 0)
+        messageTextField.keyboardDistanceFromTextField = -tabBarControllerHeight + (messageTextField.top)
+        
         self.navigationItem.title = "Chat Room"
         navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOutTapped))
@@ -62,7 +66,6 @@ class ChatRoomViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         
         
         messageTextField.layer.cornerRadius = messageTextField.frame.size.height / 2.5
